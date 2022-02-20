@@ -253,7 +253,7 @@ if menu=='Interactive Map':
     map_df_fig[['Latitude', 'Longitude']] = map_df[['Latitude', 'Longitude']]
     
 
-    px.set_mapbox_access_token(open("C:\\Users\\Amir\\Desktop\\Rainfall_data\\mapbox_token.txt").read())
+    px.set_mapbox_access_token(open("mapbox_token.txt").read())
 
     fig = px.scatter_mapbox(map_df_fig, lat="Latitude", lon="Longitude", size="Annual", color="Regions",
                             text = map_df_fig['Regions'], hover_name=map_df_fig['Regions'], color_continuous_scale=px.colors.cyclical.IceFire, 
